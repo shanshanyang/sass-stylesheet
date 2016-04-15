@@ -11,3 +11,17 @@ Options:
   -n, --name    Provide Output File name prefix     [string] [default: "global"]
 
 ```
+
+```
+Current Version Required configuration
+
+$ sass-stylesheet --settings config.json
+
+config.json
+
+{
+  "filterStr": ["placeholder", "variables", "mixins"],
+  "filterType": ["scss"],
+  "filterPlatform": ["desktop", "mobile"]
+}
+```
