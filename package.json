@@ -5,11 +5,21 @@
   "bin": {
     "sass-stylesheet": "bin/sass-stylesheet.js"
   },
-  "author": "",
+  "keywords": [
+    "sass",
+    "package",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shanshanyang/sass-stylesheet.git"
+  },
+  "author": "Shanshan Yang <shanshanyang.ny@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "walk": "2.3.9",
     "yargs": "4.6.0"
   },
-  "preferGlobal": "true"
+  "preferGlobal": "true",
+  "homepage": "https://github.com/shanshanyang/sass-stylesheet#readme"
 }
