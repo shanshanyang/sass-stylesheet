@@ -1,0 +1,15 @@
+{
+  "name": "sass-stylesheet",
+  "version": "0.0.1",
+  "description": "Package all scss code into one file",
+  "bin": {
+    "sass-stylesheet": "bin/sass-stylesheet.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "walk": "2.3.9",
+    "yargs": "4.6.0"
+  },
+  "preferGlobal": "true"
+}
