@@ -17,6 +17,7 @@
   "author": "Shanshan Yang <shanshanyang.ny@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "gonzales-pe": "3.2.1",
     "walk": "2.3.9",
     "yargs": "4.6.0"
   },
