@@ -22,5 +22,8 @@
     "yargs": "4.6.0"
   },
   "preferGlobal": "true",
-  "homepage": "https://github.com/shanshanyang/sass-stylesheet#readme"
+  "homepage": "https://github.com/shanshanyang/sass-stylesheet#readme",
+  "devDependencies": {
+    "chalk": "1.1.3"
+  }
 }

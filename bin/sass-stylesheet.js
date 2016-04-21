@@ -44,8 +44,11 @@ argv = require('yargs')
   })
   .argv;
 
-// const lib= require('../lib/index.js');
-const lib2 = require('../lib/index.ast.js');
+const lib= require('../lib/index.js');
+const libast = require('../lib/index.ast.js');
 
-// lib.generateSass(argv);
-lib2.generateSassAST(argv);
+if (argv.settings) {
+  lib.generateSass(argv);
+} else {
+  libast.generateSassAST(argv);
+}
