@@ -5,7 +5,6 @@ fs = require('fs'),
 argv = require('yargs')
   .usage('Usage: sass-stylesheet [options]')
   .config('settings', function (configPath) {
-    // console.log(configPath, fs.readFileSync(`${process.cwd()}/config.json`, 'utf-8'));
     const defaultConfig = {
       "filterStr": ["placeholder", "variables", "mixins"],
       "filterType": ["scss"],
@@ -42,13 +41,37 @@ argv = require('yargs')
       type: 'boolean'
     }
   })
-  .argv;
+  .argv,
+// gonzales = require('gonzales-pe'), 
+walk = require('walk'),
+// fs = require('fs'),
+// chalk = require('chalk'),
+// log_error = chalk.bold.red,
+// log_warning = chalk.bold.yellow,
+// log_success = chalk.bold.green,
+// path = require('path'),
+srcDir = `${process.cwd()}/${argv.i}`,
+// packageDir = argv.o,
+// packageName = argv.n,
+// uglify = argv.u,
+// filterType = argv.filterType || ['scss'],
+// nodeTypes = ['global', 'mixin', 'variable', 'placeholder', 'function'],
+walker = walk.walk(srcDir, {
+  followLinks: false,
+  filters: ['node_modules']
+}),
+lib = require('../lib/index.ast.js');
+console.log(srcDir, argv);
 
-const lib= require('../lib/index.js');
-const libast = require('../lib/index.ast.js');
+walker.on("file", lib.config(argv).fileHandler);
+walker.on("end", lib.config(argv).endHandler);
 
-if (argv.settings) {
-  lib.generateSass(argv);
-} else {
-  libast.generateSassAST(argv);
-}
+
+// const lib= require('../lib/index.js');
+// const libast = require('../lib/index.ast.js');
+
+// if (argv.settings) {
+//   lib.generateSass(argv);
+// } else {
+//   libast.generateSassAST(argv);
+// }
