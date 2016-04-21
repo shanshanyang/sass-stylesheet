@@ -1,0 +1,64 @@
+// @import, level-1
+@import 'style2';
+
+// Nested @import, level-2
+#main {
+  @import "style2";
+}
+
+// @media, level-1
+@media screen {
+  .sidebar {
+    //  @media, level-2
+    @media (orientation: landscape) {
+      width: 500px;
+    }
+  }
+}
+
+// @mixin
+@mixin colors($text, $background, $border) {
+  color: $text;
+  background-color: $background;
+  border-color: $border;
+}
+/*
+$values: #ff0000, #00ff00, #0000ff;
+.primary {
+  @include colors($values...);
+}
+*/
+
+// @function directive, level-1
+@function grid-width($n) {
+  @return $n * $grid-width + ($n - 1) * $gutter-width;
+}
+/*
+#sidebar { width: grid-width(5); }
+*/
+
+// Placeholder selector
+/* Placeholder can be used anywhere a class or id could, and on their own they prevent rulesets from being rendered to CSS */
+#context a%extreme {
+  color: blue;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+// @extend-Only Selectors
+.notice {
+  @extend %extreme;
+}
+
+// @extend in Directives
+/* Only extend selectors that appear within the same directive block */
+@media print {
+  .error {
+    border: 1px #f00;
+    background-color: #fdd;
+  }
+  .seriousError {
+    @extend .error;
+    border-width: 3px;
+  }
+}

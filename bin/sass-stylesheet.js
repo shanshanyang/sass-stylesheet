@@ -33,6 +33,13 @@ argv = require('yargs')
       default: 'global',
       describe: 'Provide Output File name prefix',
       type: 'string'
+    },
+    'u': {
+      alias: 'uglify',
+      demand: false,
+      default: false,
+      describe: 'Minify scss',
+      type: 'boolean'
     }
   })
   .argv;

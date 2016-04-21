@@ -1,3 +1,9 @@
+## Sass Stylesheet
+
+> Sass-stylesheet cherry picks a list of scss code from multiple files, write out the result to one file. 
+> The list is 'mixin', 'variable', 'placeholder', 'function' 
+> It is created to share reusable scss code across multiple projects without cross pollute css codebase. 
+
 `npm i -g sass-stylesheet`
 
 ```
@@ -10,6 +16,7 @@ Options:
   -i, --input   Provide source directory path as input       [string] [required]
   -o, --output  Provide output directory path                [string] [required]
   -n, --name    Provide Output File name prefix     [string] [default: "global"]
+  -u, --uglify  Minify scss                           [boolean] [default: false]
 
 ```
 
@@ -27,8 +34,7 @@ config.json
 }
 ```
 
-Next Version 
+AST Version 
 
-$ sass-stylesheet -i [scss source code directory] -s
+$ sass-stylesheet -i [scss source code directory] -u
 
-Parse SCSS and write output stream with default node types: ["placeholder", "variables", "mixins"]

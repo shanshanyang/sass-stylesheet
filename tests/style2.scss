@@ -1,0 +1,13 @@
+.example {
+  color: red;
+}
+
+// variable, level-1
+$primary-color: #333;
+
+// variable with !global
+#main {
+    // varabile, level-2, bubble up to be level-1
+  $width: 5em !global;
+  width: $width;
+}
