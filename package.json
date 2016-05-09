@@ -1,6 +1,6 @@
 {
   "name": "sass-stylesheet",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Package all scss code into one file",
   "bin": {
     "sass-stylesheet": "bin/sass-stylesheet.js"
