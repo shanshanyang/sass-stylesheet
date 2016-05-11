@@ -45,6 +45,15 @@ $values: #ff0000, #00ff00, #0000ff;
   font-size: 2em;
 }
 
+// Nested Placeholder selector
+#context {
+  a%extreme {
+    color: blue;
+    font-weight: bold;
+    font-size: 2em;
+  }
+}
+
 // @extend-Only Selectors
 .notice {
   @extend %extreme;
